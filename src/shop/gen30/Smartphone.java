@@ -1,10 +1,10 @@
 package shop.gen30;
 
-public class Smarphone extends Prodotto {
+public class Smartphone extends Prodotto {
 	private String codIMEI; //15 cifre
 	private int memoria;
 
-	public Smarphone(String name, String brand, String codIMEI, int capacity) {
+	public Smartphone(String name, String brand, String codIMEI, int capacity) {
 		super(name, brand);
 		this.setCodIMEI(codIMEI);
 	    this.setMemoria(capacity);
