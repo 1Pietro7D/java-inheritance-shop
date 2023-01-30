@@ -15,12 +15,14 @@ public class Prodotto {
 		this.brand = brand;
 		this.price = price;
 	}
+
 	public Prodotto(String name, String brand) {
 		this.cod = new Random().nextInt(100000000);
 		this.name = name;
 		this.brand = brand;
-	
+
 	}
+
 	public int getCod() {
 		return cod;
 	}
@@ -61,6 +63,15 @@ public class Prodotto {
 		double priceMoreIva = (100 + getIva()) * price / 100;
 		return priceMoreIva;
 	};
+	@Override
+	public String toString() {
+	  return "Informazioni sul prodotto: " +
+	         "Codice = " + this.getCod() +
+	         ", Nome = " + this.getName() +
+	         ", Marca = " + this.getBrand() +
+	         ", Prezzo = " + this.postIva(getPrice()) + "€" +
+	         ", IVA = " + this.getIva();
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -26,5 +26,11 @@ public class Cuffia extends Prodotto {
 	public void setWireless(boolean wireless) {
 		this.wireless = wireless;
 	}
+	@Override
+	public String toString() {
+	  return super.toString() + 
+	         ", color = " + this.getColor() +
+	         ", is wireless? = " + (this.isWireless()?"yes":"no");
+	}
 
 }
