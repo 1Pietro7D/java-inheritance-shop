@@ -3,53 +3,53 @@ package shop.gen30;
 import java.util.Random;
 
 public class Prodotto {
-	private final int codice;
-	private String nome;
-	private String marca;
-	private double prezzo;
+	private final int cod;
+	private String name;
+	private String brand;
+	private double price;
 	private double iva = 22;
 
-	public Prodotto(String nome, String marca, double prezzo) {
-		this.codice = new Random().nextInt(100000000);
-		this.nome = nome;
-		this.marca = marca;
-		this.prezzo = prezzo;
+	public Prodotto(String name, String brand, double price) {
+		this.cod = new Random().nextInt(100000000);
+		this.name = name;
+		this.brand = brand;
+		this.price = price;
 	}
-	public Prodotto(String nome, String marca) {
-		this.codice = new Random().nextInt(100000000);
-		this.nome = nome;
-		this.marca = marca;
+	public Prodotto(String name, String brand) {
+		this.cod = new Random().nextInt(100000000);
+		this.name = name;
+		this.brand = brand;
 	
 	}
-	public int getCodice() {
-		return codice;
+	public int getCod() {
+		return cod;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getMarca() {
-		return marca;
+	public String getBrand() {
+		return brand;
 	}
 
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
-	public double getPrezzo() {
-		return prezzo;
+	public double getPrice() {
+		return price;
 	}
 
-	public void setPrezzo(double prezzo) {
-		if (prezzo > 0) {
-			this.prezzo = prezzo;
+	public void setPrice(double price) {
+		if (price > 0) {
+			this.price = price;
 		} else {
-			this.prezzo = 0.01;
+			this.price = 0.01;
 		}
 	}
 
@@ -66,11 +66,11 @@ public class Prodotto {
 		// TODO Auto-generated method stub
 		// Prodotto productTest = new Prodotto("marco", "nike", -1);
 		Prodotto productTest = new Prodotto("marco", "nike");
-		productTest.setPrezzo(-1);
-		System.out.print("prezzo base " + String.format("%.2f", productTest.prezzo) + "€ --");
-		System.out.println(" prezzo con iva " + String.format("%.2f", productTest.postIva(productTest.prezzo)) + "€");
-		System.out.println(productTest.getNome());
-		System.out.println(productTest.nome);
+		productTest.setPrice(-1);
+		System.out.print("prezzo base " + String.format("%.2f", productTest.price) + "€ --");
+		System.out.println(" prezzo con iva " + String.format("%.2f", productTest.postIva(productTest.price)) + "€");
+		System.out.println(productTest.getName());
+		System.out.println(productTest.name);
 	}
 
 }
