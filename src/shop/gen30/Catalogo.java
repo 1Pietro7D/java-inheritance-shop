@@ -9,7 +9,7 @@ public class Catalogo {
 		// TODO Auto-generated method stub
 		Prodotto[] catalogo = new Prodotto[0];
 		Scanner s = new Scanner(System.in);
-		s.close();// da integrare
+		
 		String userChoise = "";
 		while (!userChoise.equals("4")) {
 			System.out.println("what do you want to add to your catalogue?");
@@ -19,19 +19,19 @@ public class Catalogo {
 			System.out.println("4 - nothing");
 			userChoise = s.nextLine().trim();
 			if (userChoise.equals("1")) {
-				Smartphone smartphone = new Smartphone("mm", "mm", "IMEI00001", 1000);
+				Prodotto smartphone = new Smartphone("mm", "mm", "IMEI00001", 1000);
 				smartphone.setPrice(10);
 				System.out.println(smartphone.toString());
 				catalogo = Arrays.copyOf(catalogo, catalogo.length + 1);
 				catalogo[catalogo.length - 1] = smartphone;
 			} else if (userChoise.equals("2")) {
-				Televisore tv = new Televisore("mm", "mm", "grande", true);
+				Prodotto tv = new Televisore("mm", "mm", "grande", true);
 				tv.setPrice(10);
 				System.out.println(tv.toString());
 				catalogo = Arrays.copyOf(catalogo, catalogo.length + 1);
 				catalogo[catalogo.length - 1] = tv;
 			} else if (userChoise.equals("3")) {
-				Cuffia earphone = new Cuffia("mm", "mm", "giallo", true);
+				Prodotto earphone = new Cuffia("mm", "mm", "giallo", true);
 				earphone.setPrice(10);
 				System.out.println(earphone.toString());
 				catalogo = Arrays.copyOf(catalogo, catalogo.length + 1);
@@ -41,6 +41,7 @@ public class Catalogo {
 			}
 
 		}
+		s.close();// da integrare1
 		System.out.println("Your list:");
 		for (Object n : catalogo)
 			System.out.println(n);
