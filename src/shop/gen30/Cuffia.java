@@ -6,8 +6,8 @@ public class Cuffia extends Prodotto {
 
 	public Cuffia(String name, String brand, String color, boolean wireless) {
 		super(name, brand);
-		this.setColor(color);
-		this.setWireless(wireless);
+		setColor(color);
+		setWireless(wireless);
 		// TODO Auto-generated constructor stub
 	}
 

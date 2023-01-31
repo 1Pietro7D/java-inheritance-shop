@@ -7,8 +7,8 @@ public class Televisore extends Prodotto {
 	public Televisore(String name, String brand, String size, boolean smart) {
 		// TODO Auto-generated constructor stub
 		super(name, brand);
-		this.setSize(size);
-		this.setSmart(smart);
+		setSize(size);
+		setSmart(smart);
 	}
 
 	public String getSize() {

@@ -11,9 +11,9 @@ public class Prodotto {
 
 	public Prodotto(String name, String brand, double price) {
 		this.COD = new Random().nextInt(100000000);
-		this.name = name;
-		this.brand = brand;
-		this.price = price;
+		setName(name);
+		setBrand(brand);
+		setPrice(price);
 	}
 
 	public Prodotto(String name, String brand) {

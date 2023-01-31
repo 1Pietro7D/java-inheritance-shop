@@ -6,8 +6,8 @@ public class Smartphone extends Prodotto {
 
 	public Smartphone(String name, String brand, String codIMEI, int capacity) {
 		super(name, brand);
-		this.setCodIMEI(codIMEI);
-		this.setMemory(capacity);
+		setCodIMEI(codIMEI);
+		setMemory(capacity);
 		// TODO Auto-generated constructor stub
 
 	}
