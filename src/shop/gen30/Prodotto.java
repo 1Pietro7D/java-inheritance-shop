@@ -3,28 +3,28 @@ package shop.gen30;
 import java.util.Random;
 
 public class Prodotto {
-	private final int cod;
+	private final int COD; // final constant want uppercase
 	private String name;
 	private String brand;
 	private double price;
 	private double iva = 22;
 
 	public Prodotto(String name, String brand, double price) {
-		this.cod = new Random().nextInt(100000000);
+		this.COD = new Random().nextInt(100000000);
 		this.name = name;
 		this.brand = brand;
 		this.price = price;
 	}
 
 	public Prodotto(String name, String brand) {
-		this.cod = new Random().nextInt(100000000);
+		this.COD = new Random().nextInt(100000000);
 		this.name = name;
 		this.brand = brand;
 
 	}
 
 	public int getCod() {
-		return cod;
+		return COD;
 	}
 
 	public String getName() {
