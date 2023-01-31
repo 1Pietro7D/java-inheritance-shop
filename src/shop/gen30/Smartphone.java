@@ -12,11 +12,6 @@ public class Smartphone extends Prodotto {
 
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public String getCodIMEI() {
 		return codIMEI;
 	}
@@ -29,8 +24,8 @@ public class Smartphone extends Prodotto {
 		return memory;
 	}
 
-	public void setMemory(int memoria) {
-		this.memory = memoria;
+	public void setMemory(int capacity) {
+		this.memory = capacity;
 	}
 	@Override
 	public String toString() {
